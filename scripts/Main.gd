@@ -89,9 +89,14 @@ func show_cards(hand):
 func get_unit_position(x, y):
 	var vec = Vector2(x * 72 + 296, y * 72 + 120)
 	return vec
-		
+
+# hack in some units
 func show_units():
 	var unit = RedUnit.instance()
 	add_child(unit)
-	unit.position = get_unit_position(1, 1)
+	unit.position = get_unit_position(3, 1)
+	
+	unit = GreenUnit.instance()
+	add_child(unit)
+	unit.position = get_unit_position(3, 4)
 	
